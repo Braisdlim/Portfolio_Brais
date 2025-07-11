@@ -1,0 +1,190 @@
+---
+// About Section Component
+---
+
+<section id="sobre-mi" class="about">
+  <div class="container">
+    <div class="about-header">
+      <h2 class="section-title">
+        <span data-translate="about-title">Sobre</span> <span class="title-accent">mí</span>
+      </h2>
+      <div class="title-underline"></div>
+    </div>
+    
+    <div class="about-content">
+       <!-- Texto -->
+      <div class="about-text">
+        <p class="about-paragraph">
+          Soy <span class="about-strong">ingeniero informático</span> con una pasión por la tecnología desde que tengo memoria.<br>
+          Me defino por mi <span class="about-strong">constancia</span> y <span class="about-strong">ambición</span>, cualidades que aplico tanto en el trabajo como en mis aficiones.
+        </p>
+        <div style="height: 0.7em;"></div>
+        <p class="about-paragraph">
+          Llevo más de <span class=>10 años</span> tocando el saxofón y me apasiona el deporte, lo que me ha enseñado <span class="about-strong">disciplina</span>, <span class="about-strong">esfuerzo</span> y <span class="about-strong">trabajo en equipo</span>.
+        </p>
+        <div style="height: 0.7em;"></div>
+        <p class="about-paragraph">
+          Me interesa especialmente el <span class="about-strong">ámbito internacional</span>. Disfruto aprendiendo <span class="about-strong">nuevos idiomas</span> y colaborando con personas de diferentes países, algo que viví de forma especialmente enriquecedora durante mi experiencia <span class="about-strong">Erasmus</span>.
+        </p>
+
+      </div>
+      
+      <!-- Imagen -->
+      <div class="about-image">
+        <div class="image-wrapper">
+          <img src="/images/aboutMe.jpg" alt="Brais - Desarrollador Full Stack" class="about-photo" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+  .about-strong {
+    color: var(--accent-cyan);
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    font-style: normal;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: none;
+    transition: color 0.2s;
+  }
+  .about-strong.about-highlight {
+    color: var(--accent-purple);
+  }
+  .about {
+    padding: 5rem 0;
+    background-color: rgba(30, 41, 59, 0.5);
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .title-accent {
+    color: var(--accent-cyan);
+  }
+  
+  .title-underline {
+    width: 5rem;
+    height: 0.25rem;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    margin: 0 auto;
+    border-radius: 999px;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .about-paragraph {
+    color: var(--text-secondary);
+    font-size: 1.225rem;
+    line-height: 1.6;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.01em;
+  }
+  .about-text {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-category {
+    
+  }
+  
+  .skill-title {
+    color: var(--accent-cyan);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .skill-list li {
+    color: var(--text-secondary);
+  }
+  
+  .about-image {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .image-wrapper {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    border-radius: 1rem;
+    padding: 3px;
+    box-shadow: 
+      0 10px 30px rgba(0, 245, 255, 0.2),
+      0 0 50px rgba(217, 70, 239, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .image-wrapper:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(0, 245, 255, 0.3),
+      0 0 60px rgba(217, 70, 239, 0.2);
+  }
+  
+  .about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(1rem - 3px);
+    transition: all 0.3s ease;
+  }
+  
+  @media (min-width: 640px) {
+    .section-title {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .about-content {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .section-title {
+      font-size: 4rem;
+    }
+  }
+</style>

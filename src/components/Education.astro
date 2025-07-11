@@ -1,0 +1,350 @@
+---
+// Education Section Component
+---
+
+<section id="educacion" class="education">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-translate="education-title">Educación</h2>
+      <p class="section-description" data-translate="education-description">
+        Mi formación académica y certificaciones profesionales
+      </p>
+    </div>
+    
+    <div class="education-content">
+      <!-- Timeline de Estudios -->
+      <div class="education-block">
+        <h3 class="education-subtitle" data-translate="academic-studies">Estudios Académicos</h3>
+        
+        <div class="timeline">
+          <!-- Grado en Ingeniería Informática -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">2021 - 2025</div>
+              <h4 class="timeline-title" data-translate="degree-title">
+                Grado en Ingeniería Informática
+              </h4>
+              <p class="timeline-institution">
+                <svg class="institution-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
+                <span data-translate="uvigo">Universidad de Vigo (UVigo)</span>
+              </p>
+              <div class="timeline-grade">
+                <span class="grade-label" data-translate="average-grade">Nota media:</span>
+                <span class="grade-value">7,56</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Erasmus -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-dot erasmus"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">2023 - 2024</div>
+              <h4 class="timeline-title">
+                <span data-translate="erasmus-title">Erasmus - Computer Science</span>
+                <span class="erasmus-badge">Erasmus+</span>
+              </h4>
+              <p class="timeline-institution">
+                <svg class="institution-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span data-translate="oradea-university">Universitatea din Oradea, Rumania</span>
+              </p>
+              <div class="timeline-grade excellent">
+                <span class="grade-label" data-translate="average-grade">Nota media:</span>
+                <span class="grade-value">9,32</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certificaciones -->
+      <div class="certifications-block">
+        <h3 class="education-subtitle" data-translate="certifications">Certificaciones</h3>
+        
+        <div class="certification-item">
+          <div class="certification-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+            </svg>
+          </div>
+          <div class="certification-content">
+            <h4 class="certification-title" data-translate="english-b2">B2 en Inglés</h4>
+            <p class="certification-issuer">
+              <span data-translate="british-council">British Council</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .education {
+    padding: 5rem 0;
+    background: var(--bg-primary);
+    position: relative;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .section-description {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .education-content {
+    display: grid;
+    gap: 4rem;
+  }
+  
+  .education-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .education-subtitle::before {
+    content: '';
+    width: 3px;
+    height: 1.5rem;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    border-radius: 2px;
+  }
+  
+  /* Timeline Styles */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.75rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent-cyan), var(--accent-purple));
+    border-radius: 1px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 3rem;
+  }
+  
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    left: -1.5rem;
+    top: 0.5rem;
+  }
+  
+  .timeline-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--accent-cyan);
+    border: 3px solid var(--bg-primary);
+    box-shadow: 0 0 0 3px var(--accent-cyan);
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-dot.erasmus {
+    background: var(--accent-purple);
+    box-shadow: 0 0 0 3px var(--accent-purple);
+  }
+  
+  .timeline-content {
+    background: rgba(26, 26, 26, 0.5);
+    border: 1px solid rgba(160, 160, 160, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-content:hover {
+    border-color: var(--accent-cyan);
+    background: rgba(26, 26, 26, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 245, 255, 0.1);
+  }
+  
+  .timeline-date {
+    color: var(--accent-cyan);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+  .erasmus-badge {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+    color: var(--bg-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+  }
+  
+  .timeline-institution {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .institution-icon {
+    color: var(--accent-green);
+    flex-shrink: 0;
+  }
+  
+  .timeline-grade {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .grade-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+  
+  .grade-value {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
+    color: var(--bg-primary);
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .timeline-grade.excellent .grade-value {
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+    box-shadow: 0 0 15px rgba(16, 245, 76, 0.3);
+  }
+  
+  /* Certifications Styles */
+  .certifications-block {
+    max-width: 600px;
+  }
+  
+  .certification-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(26, 26, 26, 0.5);
+    border: 1px solid rgba(160, 160, 160, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .certification-item:hover {
+    border-color: var(--accent-green);
+    background: rgba(26, 26, 26, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(16, 245, 76, 0.1);
+  }
+  
+  .certification-icon {
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+    color: var(--bg-primary);
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .certification-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+  
+  .certification-issuer {
+    color: var(--text-muted);
+    margin: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .education-content {
+      grid-template-columns: 2fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    
+    .section-title {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .timeline {
+      padding-left: 3rem;
+    }
+    
+    .timeline-item {
+      padding-left: 4rem;
+    }
+    
+    .timeline-marker {
+      left: -2rem;
+    }
+  }
+</style>

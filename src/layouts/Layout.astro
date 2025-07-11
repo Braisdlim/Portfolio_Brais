@@ -1,0 +1,71 @@
+---
+import '../styles/global.css'
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Brais - Desarrollador Full Stack", 
+  description = "Portfolio profesional de Brais, desarrollador Full Stack especializado en tecnologías modernas" 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Serif+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <!-- DevIcons CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  </head>
+  <body>
+    <button id="theme-toggle" aria-label="Cambiar modo claro/oscuro">
+      <svg id="theme-toggle-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5" />
+        <path d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.07l-1.41-1.41M6.34 6.34L4.93 4.93m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41" />
+      </svg>
+    </button>
+    <slot />
+    <script>
+      // @ts-nocheck
+      // Botón de cambio de tema
+      document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-toggle-icon');
+        function setTheme(mode) {
+          if (mode === 'light') {
+            document.documentElement.classList.add('light-mode');
+            localStorage.setItem('theme', 'light');
+            if (icon) icon.innerHTML = '<circle cx="12" cy="12" r="5" /><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.07l-1.41-1.41M6.34 6.34L4.93 4.93m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41" />';
+          } else {
+            document.documentElement.classList.remove('light-mode');
+            localStorage.setItem('theme', 'dark');
+            if (icon) icon.innerHTML = '<path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />';
+          }
+        }
+        // Inicializar tema
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') setTheme('light');
+        else setTheme('dark');
+        if (themeToggle) {
+          themeToggle.addEventListener('click', () => {
+            const isLight = document.documentElement.classList.contains('light-mode');
+            setTheme(isLight ? 'dark' : 'light');
+          });
+        }
+      });
+    </script>
+    <script src="/js/scrollspy.js" defer></script>
+    <script src="/js/language-toggle.js" defer></script>
+  </body>
+</html>
