@@ -159,7 +159,7 @@ Este proyecto está bajo la Licencia MIT. Ver [LICENSE](LICENSE) para más detal
 **Brais de la Iglesia Martínez**
 - 💼 [LinkedIn](https://www.linkedin.com/in/braisdlim)
 - 🐙 [GitHub](https://github.com/Braisdlim)
-- 📧 Email: brais@email.com
+- 📧 Email: braisdlim.tw@email.com
 
 ---
 
