@@ -120,24 +120,32 @@ html {
 }
 
 html.light-mode {
-  --bg-primary: #f7fafd;
-  --bg-secondary: #eaf1fb;
-  --bg-tertiary: #e0e7ef;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #e2e8f0;
   --surface: #ffffff;
-  --surface-contrast: #e0e7ef;
-  --header-bg: #f3f6fb;
-  --header-shadow: 0 2px 16px 0 rgba(0, 188, 212, 0.10);
-  --text-primary: #1a2233;
-  --text-secondary: #3b4252;
-  --text-muted: #7b8794;
-  --accent-cyan: #00bcd4;
-  --accent-purple: #a259e6;
-  --accent-green: #10b981;
-  --accent-orange: #ff9800;
-  --accent-blue: #3b82f6;
-  --accent-pink: #f472b6;
-  --border-strong: #b6c6e3;
-  --border-soft: #e0e7ef;
+  --surface-contrast: #1e293b;
+  --surface-elevated: #ffffff;
+  --header-bg: #ffffff;
+  --header-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-contrast: #ffffff;
+  --accent-cyan: #0891b2;
+  --accent-purple: #7c3aed;
+  --accent-green: #059669;
+  --accent-orange: #ea580c;
+  --accent-blue: #2563eb;
+  --accent-pink: #db2777;
+  --accent-dark: #1e293b;
+  --border-strong: #cbd5e1;
+  --border-soft: #e2e8f0;
+  --border-contrast: #475569;
+  --shadow-light: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-strong: 0 16px 48px rgba(0, 0, 0, 0.18);
+  --shadow-accent: 0 8px 32px rgba(37, 99, 235, 0.25);
 }
 
 
@@ -181,30 +189,35 @@ body::before {
   transition: background 0.6s cubic-bezier(.4,0,.2,1);
 }
 html.light-mode body {
-  background: linear-gradient(135deg, #f7fafd 0%, #eaf1fb 60%, #f3e8ff 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 60%, #e2e8f0 100%);
 }
 html.light-mode body::before {
-  background: radial-gradient(circle at 30% 70%, rgba(0,188,212,0.13) 0%, rgba(162,89,230,0.10) 40%, rgba(255,152,0,0.08) 60%, transparent 90%);
-  filter: blur(90px);
-  opacity: 0.7;
+  background: radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.08) 0%, rgba(124, 58, 237, 0.06) 40%, rgba(234, 88, 12, 0.04) 70%, transparent 90%);
+  filter: blur(80px);
+  opacity: 0.9;
 }
 
 html.light-mode .header {
-  background: var(--header-bg);
+  background: var(--surface);
   box-shadow: var(--header-shadow);
-  border-bottom: 1.5px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+  backdrop-filter: blur(20px);
 }
 html.light-mode .nav-link {
   color: var(--accent-blue);
-  background: transparent;
+  background: var(--surface);
   font-weight: 600;
+  border: 1px solid transparent;
   border-radius: 0.5rem;
-  transition: background 0.2s, color 0.2s;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
 }
 html.light-mode .nav-link:hover {
-  color: var(--surface);
-  background: linear-gradient(90deg, var(--accent-blue) 60%, var(--accent-cyan) 100%);
-  box-shadow: 0 2px 12px rgba(0,188,212,0.10);
+  color: var(--text-contrast);
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  box-shadow: var(--shadow-accent);
+  transform: translateY(-1px);
 }
 html.light-mode .nav-separator {
   background: var(--border-strong);
@@ -377,6 +390,36 @@ html.light-mode .container {
   box-shadow: 0 10px 30px rgba(0, 188, 212, 0.18);
 }
 
+/* Botones en modo claro */
+html.light-mode .btn-primary {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: var(--text-contrast);
+  box-shadow: var(--shadow-accent);
+  border: 1px solid var(--accent-blue);
+}
+
+html.light-mode .btn-primary:hover {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-3px);
+  border-color: var(--accent-purple);
+}
+
+html.light-mode .btn-outline {
+  border: 2px solid var(--accent-blue);
+  color: var(--accent-blue);
+  background: var(--surface);
+  box-shadow: var(--shadow-light);
+  font-weight: 600;
+}
+
+html.light-mode .btn-outline:hover {
+  background: var(--accent-blue);
+  color: var(--text-contrast);
+  box-shadow: var(--shadow-accent);
+  transform: translateY(-3px);
+}
+
 /* Animaciones */
 .fade-in {
   animation: fadeIn 0.8s ease-in;
@@ -400,6 +443,11 @@ html.light-mode .container {
 .hover-lift:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Efectos hover mejorados para modo claro */
+html.light-mode .hover-lift:hover {
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.15);
 }
 
 /* Responsive */
@@ -435,6 +483,45 @@ html.light-mode .container {
 }
 #theme-toggle svg {
   pointer-events: none;
+}
+
+/* Botón de tema en modo claro */
+html.light-mode #theme-toggle {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: var(--text-contrast);
+  box-shadow: var(--shadow-strong);
+  border: 3px solid var(--surface);
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  overflow: hidden;
+}
+
+html.light-mode #theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+html.light-mode #theme-toggle:hover::before {
+  opacity: 1;
+}
+
+html.light-mode #theme-toggle:hover {
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.4);
+  border-color: var(--accent-blue);
+  transform: scale(1.12);
+}
+
+html.light-mode #theme-toggle svg {
+  position: relative;
+  z-index: 2;
 }
 
 /* --- Language Switcher Pill: Ultra Minimalista --- */
@@ -538,3 +625,83 @@ html.light-mode .lang-switch.active-en .lang-switch-toggle {
   font-size: 1em;
   letter-spacing: 0.5px;
 }
+
+/* Estilos globales para palabras destacadas en About */
+.about-highlight {
+  color: #00f5ff !important;
+  font-weight: 700 !important;
+  transition: color 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.about-highlight:hover {
+  color: #d946ef !important;
+}
+
+/* Modo claro */
+html.light-mode .about-highlight {
+  color: #2563eb !important;
+  font-weight: 700 !important;
+}
+
+html.light-mode .about-highlight:hover {
+  color: #7c3aed !important;
+}
+
+/* Mayor especificidad para asegurar que se apliquen */
+#sobre-mi .about-highlight,
+.about .about-highlight,
+.about-paragraph .about-highlight,
+.about-text .about-highlight {
+  color: #00f5ff !important;
+  font-weight: 700 !important;
+}
+
+#sobre-mi .about-highlight:hover,
+.about .about-highlight:hover,
+.about-paragraph .about-highlight:hover,
+.about-text .about-highlight:hover {
+  color: #d946ef !important;
+}
+
+html.light-mode #sobre-mi .about-highlight,
+html.light-mode .about .about-highlight,
+html.light-mode .about-paragraph .about-highlight,
+html.light-mode .about-text .about-highlight {
+  color: #2563eb !important;
+}
+
+html.light-mode #sobre-mi .about-highlight:hover,
+html.light-mode .about .about-highlight:hover,
+html.light-mode .about-paragraph .about-highlight:hover,
+html.light-mode .about-text .about-highlight:hover {
+  color: #7c3aed !important;
+}
+
+/* === ESTILOS DE DEBUG PARA HIGHLIGHT === */
+.highlight {
+  color: #00f5ff !important;
+  font-weight: 900 !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  text-shadow: 0 0 10px rgba(0, 245, 255, 0.5) !important;
+  transition: all 0.3s ease !important;
+  letter-spacing: 0.02em !important;
+}
+
+.highlight:hover {
+  color: #d946ef !important;
+  text-shadow: 0 0 15px rgba(217, 70, 239, 0.6) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Modo claro */
+html.light-mode .highlight {
+  color: #2563eb !important;
+  text-shadow: 0 0 8px rgba(37, 99, 235, 0.4) !important;
+}
+
+html.light-mode .highlight:hover {
+  color: #7c3aed !important;
+  text-shadow: 0 0 12px rgba(124, 58, 237, 0.5) !important;
+}
+/* === FIN ESTILOS HIGHLIGHT === */

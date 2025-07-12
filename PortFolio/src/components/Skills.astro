@@ -106,24 +106,10 @@
         </h3>
         <div class="skills-list">
           <div class="skill-item">
-            <div class="skill-icon sql">
-              <i class="devicon-mysql-plain"></i>
-            </div>
-            <span class="skill-name">SQL</span>
-          </div>
-          
-          <div class="skill-item">
             <div class="skill-icon mysql">
               <i class="devicon-mysql-plain"></i>
             </div>
             <span class="skill-name">MySQL</span>
-          </div>
-          
-          <div class="skill-item">
-            <div class="skill-icon postgres">
-              <i class="devicon-postgresql-plain"></i>
-            </div>
-            <span class="skill-name">PostgreSQL</span>
           </div>
         </div>
       </div>
@@ -134,7 +120,7 @@
           <svg class="category-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2a4 4 0 018 0v2M9 17H7a2 2 0 01-2-2v-5a2 2 0 012-2h10a2 2 0 012 2v5a2 2 0 01-2 2h-2M9 17v2a2 2 0 002 2h2a2 2 0 002-2v-2" />
           </svg>
-          <span>Sistemas de Administración</span>
+          <span data-translate="administration-systems">Sistemas de Administración</span>
         </h3>
         <div class="skills-list">
           <div class="skill-item">
@@ -206,7 +192,7 @@
               <i class="devicon-react-original"></i>
             </div>
             <span class="skill-name">React</span>
-            <div class="learning-badge">Aprendiendo</div>
+            <div class="learning-badge" data-translate="learning-badge">Aprendiendo</div>
           </div>
         </div>
       </div>
@@ -217,8 +203,9 @@
 <style>
   .skills {
     padding: 6rem 0;
-    background: var(--bg-primary);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
     position: relative;
+    overflow: hidden;
   }
   
   .skills::before {
@@ -229,8 +216,15 @@
     right: 0;
     bottom: 0;
     background-image: 
-      radial-gradient(circle at 20% 20%, rgba(0, 245, 255, 0.05) 0%, transparent 30%),
-      radial-gradient(circle at 80% 80%, rgba(217, 70, 239, 0.05) 0%, transparent 30%);
+      radial-gradient(circle at 20% 20%, rgba(0, 245, 255, 0.08) 0%, transparent 35%),
+      radial-gradient(circle at 80% 80%, rgba(217, 70, 239, 0.06) 0%, transparent 35%),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 50px,
+        rgba(255, 255, 255, 0.01) 50px,
+        rgba(255, 255, 255, 0.01) 52px
+      );
     pointer-events: none;
   }
   
@@ -385,9 +379,7 @@
   .skill-icon.css i { color: #1572b6; }
   .skill-icon.bootstrap i { color: #7952b3; }
   .skill-icon.javascript i { color: #f7df1e; }
-  .skill-icon.sql i { color: #4479a1; }
   .skill-icon.mysql i { color: #4479a1; }
-  .skill-icon.postgres i { color: #336791; }
   .skill-icon.git i { color: #f05032; }
   .skill-icon.github i { color: var(--text-primary); }
   .skill-icon.vscode i { color: #007acc; }
@@ -438,5 +430,121 @@
     .skill-category {
       padding: 1.5rem;
     }
+  }
+
+  /* Estilos completos para modo claro */
+  html.light-mode .skills {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--surface) 50%, var(--bg-secondary) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  html.light-mode .skills::before {
+    background-image: 
+      radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.05) 0%, transparent 40%),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 60px,
+        rgba(37, 99, 235, 0.02) 60px,
+        rgba(37, 99, 235, 0.02) 62px
+      );
+  }
+
+  html.light-mode .title-gradient {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+  }
+
+  html.light-mode .section-description {
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  html.light-mode .skill-category {
+    background: #475569;
+    border: 2px solid #334155;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  html.light-mode .skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  }
+
+  html.light-mode .skill-category:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-8px);
+  }
+
+  html.light-mode .skill-category.learning::before {
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-pink));
+  }
+
+  html.light-mode .skill-category.learning:hover {
+    border-color: var(--accent-orange);
+    box-shadow: 0 16px 48px rgba(234, 88, 12, 0.25);
+  }
+
+  html.light-mode .category-title {
+    color: #f8fafc;
+    font-weight: 700;
+  }
+
+  html.light-mode .category-icon {
+    color: #00f5ff;
+  }
+
+  html.light-mode .learning .category-icon {
+    color: #f97316;
+  }
+
+  html.light-mode .skill-item {
+    background: #e2e8f0;
+    border: 2px solid #cbd5e1;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  html.light-mode .skill-item:hover {
+    border-color: #00f5ff;
+    background: #f8fafc;
+    box-shadow: 0 8px 32px rgba(0, 245, 255, 0.25);
+    transform: translateY(-4px) scale(1.05);
+  }
+
+  html.light-mode .learning-item:hover {
+    border-color: #f97316;
+    background: #f8fafc;
+    box-shadow: 0 8px 24px rgba(234, 88, 12, 0.2);
+  }
+
+  html.light-mode .skill-letter {
+    color: var(--accent-blue);
+    font-weight: 900;
+  }
+
+  html.light-mode .skill-name {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  html.light-mode .learning-badge {
+    background: var(--accent-orange);
+    color: var(--text-contrast);
+    border: 2px solid var(--surface);
+    box-shadow: var(--shadow-light);
   }
 </style>

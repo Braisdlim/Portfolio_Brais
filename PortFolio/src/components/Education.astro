@@ -24,14 +24,14 @@
             </div>
             <div class="timeline-content">
               <div class="timeline-date">2021 - 2025</div>
-              <h4 class="timeline-title" data-translate="degree-title">
+              <h4 class="timeline-title" data-translate="computer-engineering-degree">
                 Grado en Ingeniería Informática
               </h4>
               <p class="timeline-institution">
                 <svg class="institution-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                 </svg>
-                <span data-translate="uvigo">Universidad de Vigo (UVigo)</span>
+                <span data-translate="university-vigo">Universidad de Vigo (UVigo)</span>
               </p>
               <div class="timeline-grade">
                 <span class="grade-label" data-translate="average-grade">Nota media:</span>
@@ -48,14 +48,14 @@
             <div class="timeline-content">
               <div class="timeline-date">2023 - 2024</div>
               <h4 class="timeline-title">
-                <span data-translate="erasmus-title">Erasmus - Computer Science</span>
+                <span data-translate="erasmus-computer-science">Erasmus - Computer Science</span>
                 <span class="erasmus-badge">Erasmus+</span>
               </h4>
               <p class="timeline-institution">
                 <svg class="institution-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span data-translate="oradea-university">Universitatea din Oradea, Rumania</span>
+                <span data-translate="university-oradea">Universitatea din Oradea, Rumania</span>
               </p>
               <div class="timeline-grade excellent">
                 <span class="grade-label" data-translate="average-grade">Nota media:</span>
@@ -91,8 +91,23 @@
 <style>
   .education {
     padding: 5rem 0;
-    background: var(--bg-primary);
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     position: relative;
+    overflow: hidden;
+  }
+  
+  .education::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(0, 245, 255, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 75% 75%, rgba(16, 245, 76, 0.08) 0%, transparent 40%),
+      linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.02) 50%, transparent 60%);
+    pointer-events: none;
   }
   
   .container {
@@ -110,7 +125,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -142,7 +157,7 @@
     content: '';
     width: 3px;
     height: 1.5rem;
-    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
     border-radius: 2px;
   }
   
@@ -159,7 +174,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--accent-cyan), var(--accent-purple));
+    background: linear-gradient(180deg, var(--accent-cyan), var(--accent-green));
     border-radius: 1px;
   }
   
@@ -190,8 +205,8 @@
   }
   
   .timeline-dot.erasmus {
-    background: var(--accent-purple);
-    box-shadow: 0 0 0 3px var(--accent-purple);
+    background: var(--accent-green);
+    box-shadow: 0 0 0 3px var(--accent-green);
   }
   
   .timeline-content {
@@ -229,7 +244,7 @@
   }
   
   .erasmus-badge {
-    background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
     color: var(--bg-primary);
     font-size: 0.75rem;
     font-weight: 600;
@@ -346,5 +361,112 @@
     .timeline-marker {
       left: -2rem;
     }
+  }
+
+  /* Estilos completos para modo claro */
+  html.light-mode .education {
+    background: linear-gradient(135deg, #d1fae5 0%, #6ee7b7 50%, #10b981 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  html.light-mode .education::before {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 75% 75%, rgba(5, 150, 105, 0.08) 0%, transparent 40%),
+      linear-gradient(45deg, transparent 40%, rgba(16, 185, 129, 0.06) 50%, transparent 60%);
+  }
+
+  html.light-mode .section-title {
+    color: var(--text-primary);
+  }
+
+  html.light-mode .section-description {
+    color: var(--text-muted);
+  }
+
+  html.light-mode .education-subtitle {
+    color: var(--text-primary);
+  }
+
+  html.light-mode .timeline::before {
+    background: var(--border-strong);
+  }
+
+  html.light-mode .timeline-dot {
+    background: var(--accent-blue);
+    border-color: var(--surface);
+  }
+
+  html.light-mode .timeline-content {
+    background: var(--surface);
+    border: 1.5px solid var(--border-soft);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  html.light-mode .timeline-content:hover {
+    border-color: var(--accent-blue);
+    background: var(--surface);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.15);
+  }
+
+  html.light-mode .timeline-date {
+    color: var(--accent-blue);
+  }
+
+  html.light-mode .timeline-title {
+    color: var(--text-primary);
+  }
+
+  html.light-mode .erasmus-badge {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+    color: var(--surface);
+  }
+
+  html.light-mode .timeline-institution {
+    color: var(--text-secondary);
+  }
+
+  html.light-mode .institution-icon {
+    color: var(--accent-green);
+  }
+
+  html.light-mode .grade-label {
+    color: var(--text-muted);
+  }
+
+  html.light-mode .grade-value {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+    color: var(--surface);
+  }
+
+  html.light-mode .timeline-grade.excellent .grade-value {
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  }
+
+  html.light-mode .certification-item {
+    background: var(--surface);
+    border: 1.5px solid var(--border-soft);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  html.light-mode .certification-item:hover {
+    border-color: var(--accent-green);
+    background: var(--surface);
+    box-shadow: 0 12px 32px rgba(16, 185, 129, 0.15);
+  }
+
+  html.light-mode .certification-icon {
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+    color: var(--surface);
+  }
+
+  html.light-mode .certification-title {
+    color: var(--text-primary);
+  }
+
+  html.light-mode .certification-issuer {
+    color: var(--text-muted);
   }
 </style>

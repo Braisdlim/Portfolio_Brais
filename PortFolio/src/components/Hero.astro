@@ -19,12 +19,12 @@
         <!-- Breve descripción personal -->
         <div class="profile-intro">
           <div class="hero-main-block">
-            <span class="hero-greeting">Hola, soy Brais</span>
+            <span class="hero-greeting" data-translate="hero-greeting">Hola, soy Brais</span>
             <span class="hero-role-line">
-              <span class="hero-role">Ingeniero Informático</span>
-              <span class="hero-desc">desde Galicia, España</span>
-              <span class="hero-desc">Formado dentro y fuera del aula para ser</span>
-              <span class="hero-fullstack hero-fancy" style="margin-left:0;">Desarrollador Full Stack</span>
+              <span class="hero-role" data-translate="hero-role">Ingeniero Informático</span>
+              <span class="hero-desc" data-translate="hero-location">desde Galicia, España</span>
+              <span class="hero-desc" data-translate="hero-formation">Formado dentro y fuera del aula para ser</span>
+              <span class="hero-fullstack hero-fancy" style="margin-left:0;" data-translate="hero-title">Desarrollador Full Stack</span>
             </span>
           </div>
         </div>
@@ -57,7 +57,7 @@
   
   <!-- Indicador de scroll -->
   <div class="scroll-indicator">
-    <a href="#sobre-mi" class="scroll-link" data-translate="hero-scroll">
+    <a href="#sobre-mi" class="scroll-link" aria-label="Desliza hacia abajo">
       <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
@@ -206,9 +206,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(ellipse at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
     position: relative;
     overflow: hidden;
+  }
+  
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-primary) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
   
   .hero-bg {
@@ -385,6 +397,21 @@
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 10px 25px rgba(0, 245, 255, 0.2);
   }
+
+  /* Estilos específicos para modo claro */
+  html.light-mode .social-link {
+    color: var(--text-secondary);
+    border-color: var(--border-soft);
+    background: var(--surface);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  html.light-mode .social-link:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    background: rgba(0, 188, 212, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 188, 212, 0.2);
+  }
   
   .scroll-indicator {
     position: absolute;
@@ -392,7 +419,7 @@
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
-    z-index: 1000;
+    z-index: 10;
   }
   
   .scroll-link {
@@ -492,5 +519,91 @@
   .profile-photo:hover {
     transform: scale(1.05);
     border-color: var(--accent-cyan);
+  }
+
+  /* Estilos completos para modo claro */
+  html.light-mode .hero {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--surface) 50%, var(--bg-secondary) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  html.light-mode .hero::after {
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-primary) 100%);
+  }
+
+  html.light-mode .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(124, 58, 237, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  html.light-mode .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  html.light-mode .hero-greeting,
+  html.light-mode .hero-role,
+  html.light-mode .hero-desc {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  html.light-mode .hero-fullstack.hero-fancy {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+  }
+
+  html.light-mode .profile-photo {
+    border: 4px solid var(--surface);
+    box-shadow: var(--shadow-strong);
+    background: var(--surface);
+  }
+
+  html.light-mode .profile-photo:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 16px 48px rgba(37, 99, 235, 0.3);
+    transform: scale(1.08);
+  }
+
+  html.light-mode .social-link {
+    color: var(--text-secondary);
+    border: 2px solid var(--border-strong);
+    background: var(--surface);
+    box-shadow: var(--shadow-medium);
+    backdrop-filter: blur(10px);
+  }
+
+  html.light-mode .social-link:hover {
+    color: var(--text-contrast);
+    border-color: var(--accent-blue);
+    background: var(--accent-blue);
+    box-shadow: var(--shadow-accent);
+    transform: translateY(-4px) scale(1.15);
+  }
+
+  html.light-mode .scroll-link {
+    color: var(--accent-blue);
+    border: 2px solid var(--accent-blue);
+    background: var(--surface);
+    box-shadow: var(--shadow-light);
+  }
+
+  html.light-mode .scroll-link:hover {
+    color: var(--text-contrast);
+    border-color: var(--accent-purple);
+    background: var(--accent-purple);
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
   }
 </style>

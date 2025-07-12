@@ -1,0 +1,361 @@
+---
+// About Section Component
+---
+
+<section id="sobre-mi" class="about">
+  <div class="container">
+    <div class="about-header">
+      <h2 class="section-title">
+        <span data-translate="about-title">Sobre</span> <span class="title-accent" data-translate="about-title-accent">mí</span>
+      </h2>
+      <div class="title-underline"></div>
+    </div>
+    
+    <div class="about-content">
+       <!-- Texto -->
+      <div class="about-text">
+        <p class="about-paragraph">
+          <span data-translate="about-description-1">Soy <strong class="highlight">ingeniero informático</strong> con una pasión por la tecnología desde que tengo memoria. Me defino por mi <strong class="highlight">constancia</strong> y <strong class="highlight">ambición</strong>, cualidades que aplico tanto en el trabajo como en mis aficiones.</span>
+        </p>
+        <div style="height: 0.7em;"></div>
+        <p class="about-paragraph">
+          <span data-translate="about-description-2">Llevo más de 10 años tocando el saxofón y me apasiona el deporte, lo que me ha enseñado <strong class="highlight">disciplina</strong>, <strong class="highlight">esfuerzo</strong> y <strong class="highlight">trabajo en equipo</strong>.</span>
+        </p>
+        <div style="height: 0.7em;"></div>
+        <p class="about-paragraph">
+          <span data-translate="about-description-3">Me interesa especialmente el <strong class="highlight">ámbito internacional</strong>. Disfruto aprendiendo nuevos <strong class="highlight">idiomas</strong> y colaborando con personas de diferentes países, algo que viví de forma especialmente enriquecedora durante mi experiencia Erasmus.</span>
+        </p>
+
+      </div>
+      
+      <!-- Imagen -->
+      <div class="about-image">
+        <div class="image-wrapper">
+          <img src="/images/aboutMe.jpg" alt="Brais - Desarrollador Full Stack" class="about-photo" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Script temporal para forzar innerHTML en elementos con HTML
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+      console.log('=== FORZANDO APLICACIÓN DE HTML ===');
+      
+      // Buscar todos los elementos data-translate
+      const dataTranslateElements = document.querySelectorAll('[data-translate]');
+      
+      dataTranslateElements.forEach((element, index) => {
+        const content = element.innerHTML;
+        if (content.includes('<') && content.includes('>')) {
+          console.log(`Elemento ${index} contiene HTML:`, content);
+          // Forzar re-aplicación de innerHTML
+          element.innerHTML = content;
+        }
+      });
+      
+      // Verificar elementos highlight resultantes
+      const highlights = document.querySelectorAll('.highlight');
+      console.log('Elementos .highlight encontrados después del forzado:', highlights.length);
+      
+    }, 4000); // Esperar más tiempo
+  });
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+  .about-strong {
+    color: var(--accent-cyan);
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    font-style: normal;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: none;
+    transition: color 0.2s;
+  }
+  
+  .highlight {
+    color: #00f5ff !important;
+    font-weight: 900 !important;
+    font-family: 'Montserrat', Arial, sans-serif !important;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.5) !important;
+    transition: all 0.3s ease !important;
+    letter-spacing: 0.02em !important;
+  }
+  
+  .highlight:hover {
+    color: #d946ef !important;
+    text-shadow: 0 0 15px rgba(217, 70, 239, 0.6) !important;
+    transform: translateY(-1px) !important;
+  }
+  
+  .about-strong.about-highlight {
+    color: var(--accent-purple);
+  }
+  
+  .about-paragraph .about-highlight,
+  .about-text .about-highlight,
+  span.about-highlight {
+    color: var(--accent-cyan) !important;
+    font-weight: 700 !important;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .about-paragraph .about-highlight:hover,
+  .about-text .about-highlight:hover,
+  span.about-highlight:hover {
+    color: var(--accent-purple) !important;
+  }
+  .about {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(15, 23, 42, 0.1) 10px,
+      rgba(15, 23, 42, 0.1) 20px
+    );
+    pointer-events: none;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .title-accent {
+    color: var(--accent-cyan);
+  }
+  
+  .title-underline {
+    width: 5rem;
+    height: 0.25rem;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    margin: 0 auto;
+    border-radius: 999px;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .about-paragraph {
+    color: var(--text-secondary);
+    font-size: 1.225rem;
+    line-height: 1.6;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.01em;
+  }
+  .about-text {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-category {
+    
+  }
+  
+  .skill-title {
+    color: var(--accent-cyan);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .skill-list li {
+    color: var(--text-secondary);
+  }
+  
+  .about-image {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .image-wrapper {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    border-radius: 1rem;
+    padding: 3px;
+    box-shadow: 
+      0 10px 30px rgba(0, 245, 255, 0.2),
+      0 0 50px rgba(217, 70, 239, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .image-wrapper:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(0, 245, 255, 0.3),
+      0 0 60px rgba(217, 70, 239, 0.2);
+  }
+  
+  .about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(1rem - 3px);
+    transition: all 0.3s ease;
+  }
+  
+  @media (min-width: 640px) {
+    .section-title {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .about-content {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .section-title {
+      font-size: 4rem;
+    }
+  }
+
+  /* Estilos completos para modo claro */
+  html.light-mode .about {
+    background: var(--surface);
+    box-shadow: var(--shadow-medium);
+    border-top: 4px solid var(--accent-blue);
+    border-bottom: 4px solid var(--accent-purple);
+    position: relative;
+  }
+
+  html.light-mode .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(124, 58, 237, 0.02) 100%);
+    pointer-events: none;
+  }
+
+  html.light-mode .section-title {
+    color: var(--text-primary);
+    font-weight: 800;
+  }
+
+  html.light-mode .title-accent {
+    color: var(--accent-blue);
+    font-weight: 900;
+  }
+
+  html.light-mode .title-underline {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  }
+
+  html.light-mode .about-paragraph {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  html.light-mode .about-strong {
+    color: var(--accent-blue);
+    font-weight: 900;
+  }
+  
+  html.light-mode .highlight {
+    color: #2563eb !important;
+    font-weight: 900 !important;
+    text-shadow: 0 0 8px rgba(37, 99, 235, 0.4) !important;
+  }
+  
+  html.light-mode .highlight:hover {
+    color: #7c3aed !important;
+    text-shadow: 0 0 12px rgba(124, 58, 237, 0.5) !important;
+  }
+
+  html.light-mode .about-strong.about-highlight {
+    color: var(--accent-purple);
+    font-weight: 900;
+  }
+
+  html.light-mode .about-paragraph .about-highlight,
+  html.light-mode .about-text .about-highlight,
+  html.light-mode span.about-highlight {
+    color: var(--accent-blue) !important;
+    font-weight: 700 !important;
+    transition: color 0.3s ease;
+  }
+  
+  html.light-mode .about-paragraph .about-highlight:hover,
+  html.light-mode .about-text .about-highlight:hover,
+  html.light-mode span.about-highlight:hover {
+    color: var(--accent-purple) !important;
+  }
+
+  html.light-mode .skill-title {
+    color: var(--accent-blue);
+    font-weight: 700;
+  }
+
+  html.light-mode .skill-list li {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  html.light-mode .image-wrapper {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    box-shadow: var(--shadow-strong);
+    border: 3px solid var(--surface);
+  }
+
+  html.light-mode .image-wrapper:hover {
+    box-shadow: 0 24px 56px rgba(37, 99, 235, 0.35);
+    transform: translateY(-8px) scale(1.05);
+  }
+</style>
