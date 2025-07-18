@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const langSwitchDesktopLabel = document.getElementById('langSwitchSimpleLabel');
   const langSwitchMobileLabel = document.getElementById('langSwitchMobileLabel');
   
-  let current = localStorage.getItem('preferredLanguage') || 'es';
+  let current = localStorage.getItem('preferredLanguage') || 'en';
   let translations = {};
 
   // Cargar traducciones
