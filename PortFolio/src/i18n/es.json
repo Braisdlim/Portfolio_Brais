@@ -43,8 +43,11 @@
   "projects-description": "Una selección de mis trabajos más recientes y destacados",
   "project-1-title": "Spinventory",
   "project-1-description": "Aplicación web avanzada para la gestión de colecciones de discos de vinilo. Incluye sistema de usuarios, wishlist, reseñas compartidas, generación automática de portadas y gestión inteligente de imágenes.",
-  "project-2-title": "MultithreadedEncryptionApp",
-  "project-2-description": "Aplicación de escritorio WPF en C# para experimentar y comparar el rendimiento de diferentes técnicas de paralelismo y asincronía en la encriptación de texto. Incluye TPL, Parallel.ForEach, Async/Await, soporte para cancelación y medición de rendimiento.",
+
+  "project-2-title": "IndexSearch",
+  "project-2-description": "Web app moderna para buscar, filtrar y descubrir comandos de terminal (Git, Docker, Linux, AWS, npm, etc.) con búsqueda instantánea tolerante a errores, filtros animados y una interfaz responsive y accesible. Optimizada para rendimiento y experiencia de usuario avanzada.",
+  "project-3-title": "MultithreadedEncryptionApp",
+  "project-3-description": "Aplicación de escritorio WPF en C# para experimentar y comparar el rendimiento de diferentes técnicas de paralelismo y asincronía en la encriptación de texto. Incluye TPL, Parallel.ForEach, Async/Await, soporte para cancelación y medición de rendimiento.",
   
   "education-title": "Educación",
   "education-description": "Mi formación académica y certificaciones profesionales",

@@ -126,11 +126,91 @@
         </div>
       </article>
 
-      <!-- Proyecto 2 -->
+      <!-- Proyecto 2: IndexSearch -->
       <article class="project-card">
         <div class="project-image">
           <div class="carousel-container">
-            <div class="carousel-track" id="carousel-track-2">
+            <div class="carousel-track" id="carousel-track-indexsearch">
+              <div class="carousel-slide active">
+                <img src="/images/projects/search1.png" alt="IndexSearch - Main view" />
+              </div>
+              <div class="carousel-slide">
+                <img src="/images/projects/search2.png" alt="IndexSearch - Search results" />
+              </div>
+              <div class="carousel-slide">
+                <img src="/images/projects/search3.png" alt="IndexSearch - Filters and categories" />
+              </div>
+            </div>
+            <!-- Controles del carousel -->
+            <button class="carousel-btn carousel-btn-prev" data-carousel="indexsearch" data-direction="prev" aria-label="Imagen anterior">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="carousel-btn carousel-btn-next" data-carousel="indexsearch" data-direction="next" aria-label="Siguiente imagen">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Indicadores -->
+          <div class="carousel-indicators" data-carousel="indexsearch">
+            <button class="indicator active" data-slide="0" aria-label="Imagen 1"></button>
+            <button class="indicator" data-slide="1" aria-label="Imagen 2"></button>
+            <button class="indicator" data-slide="2" aria-label="Imagen 3"></button>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title" data-translate="project-2-title">IndexSearch</h3>
+          <p class="project-description" data-translate="project-2-description">
+            Web app moderna para buscar, filtrar y descubrir comandos de terminal (Git, Docker, Linux, AWS, npm, etc.) con búsqueda instantánea tolerante a errores, filtros animados y una interfaz responsive y accesible. Optimizada para rendimiento y experiencia de usuario avanzada.
+          </p>
+          <div class="project-links-content">
+            <a href="https://indexed-search.vercel.app/" class="project-link-btn" aria-label="Ver proyecto" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/Braisdlim/IndexSearch" class="project-link-btn" aria-label="Ver código" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag csharp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 6h3c1.5 0 2.5 1 2.5 2.5v7c0 1.5-1 2.5-2.5 2.5h-3c-1.5 0-2.5-1-2.5-2.5v-7c0-1.5 1-2.5 2.5-2.5z"/>
+              </svg>
+              C#
+            </span>
+            <span class="tech-tag xaml">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v8H8V8zm2 2v4h4v-4h-4z"/>
+              </svg>
+              XAML
+            </span>
+            <span class="tech-tag dotnet">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.868 0 0 1-.869.693.868.868 0 0 1-.868-.693.868.868 0 0 1 .868-.693.868.868 0 0 1 .869.693"/>
+              </svg>
+              .NET 8
+            </span>
+            <span class="tech-tag wpf">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M2 3v18h20V3H2zm18 16H4V7h16v12zm-2-10H6v8h12V9zm-2 6H8v-4h8v4z"/>
+              </svg>
+              WPF
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="project-card">
+        <div class="project-image">
+          <div class="carousel-container">
+            <div class="carousel-track" id="carousel-track-3">
               <div class="carousel-slide active">
                 <img src="/images/projects/MultiThread1.webp" alt="MultiThread App - Vista principal" />
               </div>
@@ -143,12 +223,12 @@
             </div>
             
             <!-- Controles del carousel -->
-            <button class="carousel-btn carousel-btn-prev" data-carousel="2" data-direction="prev" aria-label="Imagen anterior">
+            <button class="carousel-btn carousel-btn-prev" data-carousel="3" data-direction="prev" aria-label="Imagen anterior">
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
               </svg>
             </button>
-            <button class="carousel-btn carousel-btn-next" data-carousel="2" data-direction="next" aria-label="Siguiente imagen">
+            <button class="carousel-btn carousel-btn-next" data-carousel="3" data-direction="next" aria-label="Siguiente imagen">
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
               </svg>
@@ -156,16 +236,16 @@
           </div>
           
           <!-- Indicadores -->
-          <div class="carousel-indicators" data-carousel="2">
+          <div class="carousel-indicators" data-carousel="3">
             <button class="indicator active" data-slide="0" aria-label="Imagen 1"></button>
             <button class="indicator" data-slide="1" aria-label="Imagen 2"></button>
             <button class="indicator" data-slide="2" aria-label="Imagen 3"></button>
           </div>
         </div>
         <div class="project-content">
-          <h3 class="project-title" data-translate="project-2-title">MultithreadedEncryptionApp</h3>
-          <p class="project-description" data-translate="project-2-description">
-            Aplicación de escritorio WPF en C# para experimentar y comparar el rendimiento de diferentes técnicas de paralelismo y asincronía en la encriptación de texto.
+          <h3 class="project-title" data-translate="project-3-title">MultithreadedEncryptionApp</h3>
+          <p class="project-description" data-translate="project-3-description">
+            Aplicación de escritorio WPF en C# para experimentar y comparar el rendimiento de diferentes técnicas de paralelismo y asincronía en la encriptación de texto. Incluye TPL, Parallel.ForEach, Async/Await, soporte para cancelación y medición de rendimiento.
           </p>
           <div class="project-links-content">
             <a href="#" class="project-link-btn" aria-label="Ver proyecto" data-modal-trigger="multithreadedencryption">
@@ -175,7 +255,7 @@
             </a>
             <a href="https://github.com/Braisdlim/MultithreadedEncryptionApp" class="project-link-btn" aria-label="Ver código" target="_blank" rel="noopener noreferrer">
               <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
             </a>
           </div>
@@ -1152,7 +1232,7 @@
 <script>
   // Carousel functionality
   class ProjectCarousel {
-    carouselId: number;
+    carouselId: string;
     track: HTMLElement | null;
     slides: NodeListOf<HTMLElement>;
     indicators: NodeListOf<HTMLElement>;
@@ -1161,15 +1241,14 @@
     currentSlide: number;
     autoPlayInterval?: ReturnType<typeof setInterval>;
 
-    constructor(carouselId: number) {
+    constructor(carouselId: string) {
       this.carouselId = carouselId;
       this.track = document.getElementById(`carousel-track-${carouselId}`);
       this.slides = this.track ? this.track.querySelectorAll('.carousel-slide') : document.createDocumentFragment().childNodes as NodeListOf<HTMLElement>;
       this.indicators = document.querySelectorAll(`[data-carousel="${carouselId}"] .indicator`);
-      this.prevBtn = document.querySelector(`[data-carousel="${carouselId}"][data-direction="prev"]`);
-      this.nextBtn = document.querySelector(`[data-carousel="${carouselId}"][data-direction="next"]`);
+      this.prevBtn = document.querySelector(`button.carousel-btn[data-carousel="${carouselId}"][data-direction="prev"]`);
+      this.nextBtn = document.querySelector(`button.carousel-btn[data-carousel="${carouselId}"][data-direction="next"]`);
       this.currentSlide = 0;
-      
       this.init();
     }
 
@@ -1249,14 +1328,10 @@
 
   // Inicializar carousels cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', () => {
-    // Inicializar carousel del proyecto 1
-    new ProjectCarousel(1);
-    
-    // Inicializar carousel del proyecto 2
-    new ProjectCarousel(2);
-    
-    // Añadir más carousels aquí si necesitas más proyectos
-    // new ProjectCarousel(3);
+    // Inicializar carousels con los ids correctos
+    new ProjectCarousel('1');
+    new ProjectCarousel('indexsearch');
+    new ProjectCarousel('3');
 
     // Funcionalidad del Modal
     const modal = document.getElementById('project-modal');
