@@ -45,7 +45,10 @@
   "project-1-description": "Advanced web application for vinyl record collection management. Features user system, wishlist, shared reviews, automatic cover generation and intelligent image management.",
   "project-2-title": "Indexed Search",
   "project-2-description": "Modern web app for searching, filtering, and discovering terminal commands (Git, Docker, Linux, AWS, npm, etc.) with instant fuzzy search, animated filters, and a responsive, accessible interface. Optimized for performance and advanced user experience.",
-  "project-3-description": "WPF desktop application in C# to experiment and compare the performance of different parallelism and asynchrony techniques in text encryption. Includes TPL, Parallel.ForEach, Async/Await, cancellation support and performance measurement.",
+  "project-3-title": "WebElements",
+  "project-3-description": "Reusable frontend component library built with React, Vite and Tailwind CSS. Over 50 ready-to-use components with dark/light mode, responsive design and intelligent search system.",
+  "project-4-title": "MultithreadedEncryptionApp",
+  "project-4-description": "WPF desktop application in C# to experiment and compare the performance of different parallelism and asynchrony techniques in text encryption. Includes TPL, Parallel.ForEach, Async/Await, cancellation support and performance measurement.",
   
   "education-title": "Education",
   "education-description": "My academic background and professional certifications",

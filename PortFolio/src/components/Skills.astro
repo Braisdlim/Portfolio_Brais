@@ -93,6 +93,18 @@
             </div>
             <span class="skill-name">Astro</span>
           </div>
+          <div class="skill-item">
+            <div class="skill-icon react">
+              <i class="devicon-react-original"></i>
+            </div>
+            <span class="skill-name">React</span>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon typescript">
+              <i class="devicon-typescript-plain"></i>
+            </div>
+            <span class="skill-name">TypeScript</span>
+          </div>
         </div>
       </div>
 
@@ -188,10 +200,17 @@
         </h3>
         <div class="skills-list">
           <div class="skill-item learning-item">
-            <div class="skill-icon react">
-              <i class="devicon-react-original"></i>
+            <div class="skill-icon nextjs">
+              <i class="devicon-nextjs-plain"></i>
             </div>
-            <span class="skill-name">React</span>
+            <span class="skill-name">Next.js</span>
+            <div class="learning-badge" data-translate="learning-badge">Aprendiendo</div>
+          </div>
+          <div class="skill-item learning-item">
+            <div class="skill-icon docker">
+              <i class="devicon-docker-plain"></i>
+            </div>
+            <span class="skill-name">Docker</span>
             <div class="learning-badge" data-translate="learning-badge">Aprendiendo</div>
           </div>
         </div>
@@ -384,7 +403,19 @@
   .skill-icon.github i { color: var(--text-primary); }
   .skill-icon.vscode i { color: #007acc; }
   .skill-icon.react i { color: #61dafb; }
+  .skill-icon.typescript i { color: #3178c6; }
+  .skill-icon.nextjs i { color: #000000; }
+  .skill-icon.docker i { color: #2496ed; }
   .skill-icon.nodejs i { color: #339933; }
+  
+  /* Next.js icon adjustments for different themes */
+  .skill-icon.nextjs i { color: #000000; }
+  
+  /* Dark mode (default) - Next.js icon white */
+  .skill-icon.nextjs i { color: #ffffff; }
+  
+  /* Light mode - Next.js icon black */
+  html.light-mode .skill-icon.nextjs i { color: #000000; }
   
   .skill-letter {
     font-weight: 700;
