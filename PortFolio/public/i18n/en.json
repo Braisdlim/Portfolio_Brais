@@ -50,6 +50,16 @@
   "project-4-title": "MultithreadedEncryptionApp",
   "project-4-description": "WPF desktop application in C# to experiment and compare the performance of different parallelism and asynchrony techniques in text encryption. Includes TPL, Parallel.ForEach, Async/Await, cancellation support and performance measurement.",
   
+  "experiencia": "Experience",
+  "experience-title": "Experience",
+  "experience-desc": "My professional and work trajectory",
+  "ntt-role": "Student",
+  "ntt-logo-alt": "NTT DATA Logo",
+  "ntt-company-contract": "NTT DATA · Internship Contract",
+  "ntt-period": "Nov 2025 - Present · 2 months",
+  "ntt-location": "La Coruña, Galicia, Spain · Hybrid",
+  "ntt-desc": "I actively collaborate in the development of a critical health management platform, designed to optimize the interaction between citizens and health services. <br><br> My role ranges from analyzing and understanding a complex architecture to implementing new features and resolving incidents. I participate in the entire development lifecycle, ensuring code quality through rigorous unit testing and detailed technical documentation, all integrated into an agile and collaborative environment.",
+  
   "education-title": "Education",
   "education-description": "My academic background and professional certifications",
   "academic-studies": "Academic Studies",

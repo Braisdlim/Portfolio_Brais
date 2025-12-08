@@ -7,13 +7,14 @@ class ScrollSpy {
   }
 
   init() {
-    // Obtener todas las secciones
+    // Obtener todas las secciones en orden
     this.sections = [
       document.getElementById('inicio'),
-      document.getElementById('sobre-mi'),
-      document.getElementById('habilidades'),
+      document.getElementById('experiencia'),
       document.getElementById('proyectos'),
+      document.getElementById('habilidades'),
       document.getElementById('educacion'),
+      document.getElementById('sobre-mi'),
       document.getElementById('contacto')
     ].filter(section => section !== null);
 
@@ -30,7 +31,9 @@ class ScrollSpy {
   setupIntersectionObserver() {
     const observerOptions = {
       root: null,
-      rootMargin: '-20% 0px -70% 0px', // Detectar cuando la sección está en el 20%-30% superior del viewport
+      // Margen ajustado para detectar mejor secciones cortas (Experiencia)
+      // Detecta cuando la sección entra en la zona superior-media de la pantalla
+      rootMargin: '-10% 0px -50% 0px', 
       threshold: 0
     };
 
@@ -57,10 +60,11 @@ class ScrollSpy {
     // Mapear IDs de sección a IDs de navegación
     const sectionToNavMap = {
       'inicio': '#inicio',
-      'sobre-mi': '#sobre-mi', 
-      'habilidades': '#habilidades',
+      'experiencia': '#experiencia',
       'proyectos': '#proyectos',
+      'habilidades': '#habilidades',
       'educacion': '#educacion',
+      'sobre-mi': '#sobre-mi',
       'contacto': '#contacto'
     };
 
@@ -87,7 +91,8 @@ class ScrollSpy {
       const sectionTop = rect.top + scrollY;
       const sectionHeight = rect.height;
 
-      if (scrollY >= sectionTop - 100 && scrollY < sectionTop + sectionHeight - 100) {
+      // Ajuste para detección inicial
+      if (scrollY >= sectionTop - 150 && scrollY < sectionTop + sectionHeight - 150) {
         activeSection = section.id;
       }
     });

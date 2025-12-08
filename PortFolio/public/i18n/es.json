@@ -14,7 +14,7 @@
   "project-modal-message": "Este proyecto aún no tiene sitio web desplegado, pero puedes explorar el código fuente y la documentación en GitHub.",
   "project-modal-close": "Cerrar",
   "project-modal-github": "Ver en GitHub",
-  
+
   "hero-greeting": "Hola, soy Brais",
   "hero-role": "Ingeniero Informático",
   "hero-location": "desde Galicia, España",
@@ -22,13 +22,13 @@
   "hero-title": "Desarrollador Full Stack",
   "hero-cta": "Ver mi trabajo",
   "hero-contact": "Contactar",
-  
+
   "about-title": "Sobre",
   "about-title-accent": "mí",
   "about-description-1": "Soy <strong class='highlight'>ingeniero informático</strong> con una pasión por la tecnología desde que tengo memoria. Me defino por mi <strong class='highlight'>constancia</strong> y <strong class='highlight'>ambición</strong>, cualidades que aplico tanto en el trabajo como en mis aficiones.",
   "about-description-2": "Llevo más de 10 años tocando el saxofón y me apasiona el deporte, lo que me ha enseñado <strong class='highlight'>disciplina</strong>, <strong class='highlight'>esfuerzo</strong> y <strong class='highlight'>trabajo en equipo</strong>.",
   "about-description-3": "Me interesa especialmente el <strong class='highlight'>ámbito internacional</strong>. Disfruto aprendiendo nuevos <strong class='highlight'>idiomas</strong> y colaborando con personas de diferentes países, algo que viví de forma especialmente enriquecedora durante mi experiencia Erasmus.",
-  
+
   "skills-title": "Habilidades",
   "skills-description": "Tecnologías y herramientas que domino para crear soluciones innovadoras",
   "programming-languages": "Lenguajes de Programación",
@@ -38,7 +38,7 @@
   "development-tools": "Herramientas de Desarrollo",
   "learning": "En Aprendizaje",
   "learning-badge": "Aprendiendo",
-  
+
   "projects-title": "Proyectos",
   "projects-description": "Una selección de mis trabajos más recientes y destacados",
   "project-1-title": "Spinventory",
@@ -49,7 +49,17 @@
   "project-3-description": "Biblioteca de componentes frontend reutilizables construida con React, Vite y Tailwind CSS. Más de 50 componentes listos para usar con modo oscuro/claro, diseño responsive y sistema de búsqueda inteligente.",
   "project-4-title": "MultithreadedEncryptionApp",
   "project-4-description": "Aplicación de escritorio WPF en C# para experimentar y comparar el rendimiento de diferentes técnicas de paralelismo y asincronía en la encriptación de texto. Incluye TPL, Parallel.ForEach, Async/Await, soporte para cancelación y medición de rendimiento.",
-  
+
+  "experiencia": "Experiencia",
+  "experience-title": "Experiencia",
+  "experience-desc": "Mi trayectoria profesional y laboral",
+  "ntt-role": "Estudiante en prácticas",
+  "ntt-logo-alt": "Logo de NTT DATA",
+  "ntt-company-contract": "NTT DATA · Contrato de prácticas",
+  "ntt-period": "nov. 2025 - actualidad · 2 meses",
+  "ntt-location": "La Coruña, Galicia, España · Híbrido",
+  "ntt-desc": "Colaboro activamente en el desarrollo de una plataforma crítica de gestión sanitaria, diseñada para optimizar la interacción entre la ciudadanía y los servicios de salud. <br><br> Mi rol abarca desde el análisis y comprensión de una arquitectura compleja hasta la implementación de nuevas funcionalidades y resolución de incidencias. Participo en todo el ciclo de vida del desarrollo, asegurando la calidad del código mediante pruebas unitarias rigurosas y documentación técnica detallada, todo ello integrado en un entorno ágil y colaborativo.",
+
   "education-title": "Educación",
   "education-description": "Mi formación académica y certificaciones profesionales",
   "academic-studies": "Estudios Académicos",
@@ -61,9 +71,9 @@
   "certifications": "Certificaciones",
   "english-b2": "B2 en Inglés",
   "british-council": "British Council",
-  
+
   "contact-title": "Contacto",
   "contact-text": "¿Te ha gustado mi perfil y crees que podría encajar en tu empresa o proyecto? No dudes en contactarme.",
-  
+
   "footer-text": "Desarrollador Full Stack"
 }

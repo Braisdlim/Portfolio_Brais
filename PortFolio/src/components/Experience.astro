@@ -1,0 +1,353 @@
+---
+// Experience Section Component
+---
+
+<section id="experiencia" class="experience-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-translate="experience-title">
+        Experiencia
+      </h2>
+      <p class="section-description" data-translate="experience-desc">
+        Mi trayectoria profesional y laboral
+      </p>
+    </div>
+
+    <div class="experience-timeline">
+      <!-- NTT DATA -->
+      <div class="experience-card">
+        <div class="card-header">
+          <div class="company-logo-wrapper">
+            <!-- NTT DATA Logo Image -->
+            <div class="company-logo">
+              <img
+                src="/images/nttdataImagen.webp"
+                alt="NTT DATA Logo"
+                data-translate="ntt-logo-alt"
+                class="logo-img"
+              />
+            </div>
+          </div>
+          <div class="header-info">
+            <h3 class="role-title" data-translate="ntt-role">
+              Estudiante en prácticas
+            </h3>
+            <div class="company-name" data-translate="ntt-company-contract">
+              NTT DATA · Contrato de prácticas
+            </div>
+            <div class="period-location">
+              <span class="period" data-translate="ntt-period"
+                >nov. 2025 - actualidad · 2 meses</span
+              >
+              <span class="separator">•</span>
+              <span class="location" data-translate="ntt-location"
+                >La Coruña, Galicia, España · Híbrido</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <p class="description" data-translate="ntt-desc">
+            Colaboro activamente en el desarrollo de una plataforma crítica de
+            gestión sanitaria, diseñada para optimizar la interacción entre la
+            ciudadanía y los servicios de salud.
+            <br /><br />
+            Mi rol abarca desde el análisis y comprensión de una arquitectura compleja
+            hasta la implementación de nuevas funcionalidades y resolución de incidencias.
+            Participo en todo el ciclo de vida del desarrollo, asegurando la calidad
+            del código mediante pruebas unitarias rigurosas y documentación técnica
+            detallada, todo ello integrado en un entorno ágil y colaborativo.
+          </p>
+
+          <div class="tags-container">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring</span>
+            <span class="tech-tag">Hibernate</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">Oracle</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">HL7</span>
+            <span class="tech-tag">Mirth Connect</span>
+            <span class="tech-tag">Maven</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">JIRA</span>
+            <span class="tech-tag">Confluence</span>
+            <span class="tech-tag">IntelliJ IDEA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .experience-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(
+        circle at 10% 20%,
+        rgba(0, 245, 255, 0.08) 0%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 90% 80%,
+        rgba(217, 70, 239, 0.08) 0%,
+        transparent 40%
+      ),
+      linear-gradient(
+        0deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.02) 50%,
+        transparent 100%
+      );
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(
+      135deg,
+      var(--accent-cyan),
+      var(--accent-purple)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+  }
+
+  .section-description {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Specificity boost with ID */
+  #experiencia .experience-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  #experiencia .experience-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: rgba(30, 41, 59, 0.6);
+  }
+
+  .card-header {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+  }
+
+  .company-logo-wrapper {
+    flex-shrink: 0;
+  }
+
+  .company-logo {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+
+  .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .header-info {
+    flex-grow: 1;
+  }
+
+  .role-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem 0;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+    color: var(--accent-cyan);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .period-location {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .separator {
+    color: var(--text-muted);
+    opacity: 0.5;
+  }
+
+  .card-body .description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .tech-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--accent-cyan);
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .tech-tag:hover {
+    background: rgba(0, 245, 255, 0.1);
+    border-color: var(--accent-cyan);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 640px) {
+    .card-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  /* Light Mode Styles */
+  html.light-mode .experience-section {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  }
+
+  html.light-mode .experience-section::before {
+    background-image: radial-gradient(
+        circle at 10% 20%,
+        rgba(37, 99, 235, 0.08) 0%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 90% 80%,
+        rgba(124, 58, 237, 0.08) 0%,
+        transparent 40%
+      );
+  }
+
+  html.light-mode .section-title {
+    background: linear-gradient(
+      135deg,
+      var(--accent-blue),
+      var(--accent-purple)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  html.light-mode #experiencia .experience-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  html.light-mode #experiencia .experience-card:hover {
+    background: #ffffff;
+    border-color: var(--accent-blue);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+  }
+
+  html.light-mode .role-title {
+    color: var(--text-primary);
+  }
+
+  html.light-mode .company-name {
+    color: var(--accent-blue);
+  }
+
+  html.light-mode .period-location {
+    color: var(--text-muted);
+  }
+
+  html.light-mode .card-body .description {
+    color: var(--text-secondary);
+  }
+
+  html.light-mode .tech-tag {
+    background: rgba(37, 99, 235, 0.05);
+    border-color: rgba(37, 99, 235, 0.2);
+    color: var(--accent-blue);
+  }
+
+  html.light-mode .tech-tag:hover {
+    background: var(--accent-blue);
+    color: #fff;
+  }
+</style>
