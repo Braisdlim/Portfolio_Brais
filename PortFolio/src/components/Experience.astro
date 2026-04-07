@@ -14,68 +14,99 @@
     </div>
 
     <div class="experience-timeline">
-      <!-- NTT DATA -->
-      <div class="experience-card">
-        <div class="card-header">
-          <div class="company-logo-wrapper">
-            <!-- NTT DATA Logo Image -->
-            <div class="company-logo">
-              <img
-                src="/images/nttdataImagen.webp"
-                alt="NTT DATA Logo"
-                data-translate="ntt-logo-alt"
-                class="logo-img"
-              />
-            </div>
+      <!-- NTT DATA – grouped card with two roles -->
+      <div class="experience-card experience-card--group">
+
+        <!-- Company header (shared) -->
+        <div class="group-company-header">
+          <div class="company-logo">
+            <img
+              src="/images/nttdataImagen.webp"
+              alt="NTT DATA Logo"
+              data-translate="ntt-logo-alt"
+              class="logo-img"
+            />
           </div>
-          <div class="header-info">
-            <h3 class="role-title" data-translate="ntt-role">
-              Estudiante en prácticas
-            </h3>
-            <div class="company-name" data-translate="ntt-company-contract">
-              NTT DATA · Contrato de prácticas
-            </div>
-            <div class="period-location">
-              <span class="period" data-translate="ntt-period"
-                >nov. 2025 - actualidad · 2 meses</span
-              >
-              <span class="separator">•</span>
-              <span class="location" data-translate="ntt-location"
-                >La Coruña, Galicia, España · Híbrido</span
-              >
-            </div>
+          <div class="group-company-meta">
+            <span class="group-company-name" data-translate="ntt-company-name">NTT DATA</span>
+            <span class="group-company-total" data-translate="ntt-total-period">nov. 2025 - actualidad</span>
           </div>
         </div>
 
-        <div class="card-body">
-          <p class="description" data-translate="ntt-desc">
-            Colaboro activamente en el desarrollo de una plataforma crítica de
-            gestión sanitaria, diseñada para optimizar la interacción entre la
-            ciudadanía y los servicios de salud.
-            <br /><br />
-            Mi rol abarca desde el análisis y comprensión de una arquitectura compleja
-            hasta la implementación de nuevas funcionalidades y resolución de incidencias.
-            Participo en todo el ciclo de vida del desarrollo, asegurando la calidad
-            del código mediante pruebas unitarias rigurosas y documentación técnica
-            detallada, todo ello integrado en un entorno ágil y colaborativo.
-          </p>
+        <!-- Internal timeline -->
+        <div class="internal-timeline">
 
-          <div class="tags-container">
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">Spring</span>
-            <span class="tech-tag">Hibernate</span>
-            <span class="tech-tag">PHP</span>
-            <span class="tech-tag">Oracle</span>
-            <span class="tech-tag">Docker</span>
-            <span class="tech-tag">HL7</span>
-            <span class="tech-tag">Mirth Connect</span>
-            <span class="tech-tag">Maven</span>
-            <span class="tech-tag">Git</span>
-            <span class="tech-tag">JIRA</span>
-            <span class="tech-tag">Confluence</span>
-            <span class="tech-tag">IntelliJ IDEA</span>
+          <!-- Role 1: Junior Engineer (current) -->
+          <div class="internal-role">
+            <div class="role-connector">
+              <div class="role-dot role-dot--current"></div>
+              <div class="role-line"></div>
+            </div>
+            <div class="role-body">
+              <div class="role-header">
+                <h3 class="role-title" data-translate="ntt-junior-role">Ingeniero Junior</h3>
+                <span class="role-badge role-badge--current" data-translate="ntt-current-badge">Actual</span>
+              </div>
+              <div class="role-contract" data-translate="ntt-junior-contract">NTT DATA · Contrato indefinido</div>
+              <div class="period-location">
+                <span class="period" data-translate="ntt-junior-period">abr. 2026 - actualidad</span>
+                <span class="separator">•</span>
+                <span class="location" data-translate="ntt-location">La Coruña, Galicia, España · Híbrido</span>
+              </div>
+              <p class="description" data-translate="ntt-junior-desc">
+                Tras mi promoción a Ingeniero Junior, me incorporé a un nuevo proyecto con un stack backend similar (Java, Spring, Hibernate, Oracle y Docker), asumiendo mayor responsabilidad técnica. Participo de forma end-to-end en el análisis, diseño e implementación de evolutivos e incidencias, colaborando estrechamente con perfiles técnicos y funcionales en un entorno ágil.
+              </p>
+              <div class="tags-container">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring</span>
+                <span class="tech-tag">Hibernate</span>
+                <span class="tech-tag">Oracle</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Maven</span>
+                <span class="tech-tag">Git</span>
+              </div>
+            </div>
           </div>
-        </div>
+
+          <!-- Role 2: Student (completed) -->
+          <div class="internal-role">
+            <div class="role-connector">
+              <div class="role-dot role-dot--past"></div>
+            </div>
+            <div class="role-body">
+              <div class="role-header">
+                <h3 class="role-title role-title--past" data-translate="ntt-role">Estudiante en prácticas</h3>
+              </div>
+              <div class="role-contract" data-translate="ntt-company-contract">NTT DATA · Contrato de prácticas</div>
+              <div class="period-location">
+                <span class="period" data-translate="ntt-period">nov. 2025 - mar. 2026</span>
+                <span class="separator">•</span>
+                <span class="location" data-translate="ntt-location">La Coruña, Galicia, España · Híbrido</span>
+              </div>
+              <p class="description" data-translate="ntt-desc">
+                Durante mi etapa de prácticas participé en dos proyectos distintos relacionados con el índice sanitario, con una base tecnológica similar pero enfoques diferentes: uno sobre una arquitectura más consolidada y otro sobre un entorno más moderno y actualizado.
+                <br /><br />
+                En ambos contribuí al análisis técnico, desarrollo de nuevas funcionalidades y resolución de incidencias, reforzando la calidad del software mediante pruebas, revisión de código y documentación técnica en metodología ágil.
+              </p>
+              <div class="tags-container">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring</span>
+                <span class="tech-tag">Hibernate</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">Oracle</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">HL7</span>
+                <span class="tech-tag">Mirth Connect</span>
+                <span class="tech-tag">Maven</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">JIRA</span>
+                <span class="tech-tag">Confluence</span>
+                <span class="tech-tag">IntelliJ IDEA</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /internal-timeline -->
       </div>
     </div>
   </div>
@@ -349,5 +380,181 @@
   html.light-mode .tech-tag:hover {
     background: var(--accent-blue);
     color: #fff;
+  }
+
+  /* ── Grouped card ─────────────────────────────────────── */
+  .experience-card--group {
+    padding: 2rem 2.5rem;
+  }
+
+  .group-company-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .group-company-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .group-company-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+
+  .group-company-total {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  /* ── Internal timeline ─────────────────────────────────── */
+  .internal-timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .internal-role {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .role-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 18px;
+    padding-top: 4px;
+  }
+
+  .role-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .role-dot--current {
+    background: var(--accent-cyan);
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+  }
+
+  .role-dot--past {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .role-line {
+    flex-grow: 1;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(0, 245, 255, 0.4), rgba(255, 255, 255, 0.06));
+    margin: 5px 0;
+  }
+
+  .role-body {
+    flex-grow: 1;
+    padding-bottom: 2rem;
+  }
+
+  .internal-role:last-child .role-body {
+    padding-bottom: 0;
+  }
+
+  .role-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.3rem;
+    flex-wrap: wrap;
+  }
+
+  .role-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .role-title--past {
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .role-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+  }
+
+  .role-badge--current {
+    background: rgba(0, 245, 255, 0.12);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(0, 245, 255, 0.3);
+  }
+
+  .role-contract {
+    font-size: 1rem;
+    color: var(--accent-cyan);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .role-body .description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0.75rem 0 1.25rem;
+    font-size: 1rem;
+  }
+
+  /* ── Light mode overrides ──────────────────────────────── */
+  html.light-mode .group-company-header {
+    border-bottom-color: rgba(0, 0, 0, 0.07);
+  }
+
+  html.light-mode .role-dot--current {
+    background: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+  }
+
+  html.light-mode .role-dot--past {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  html.light-mode .role-line {
+    background: linear-gradient(to bottom, rgba(37, 99, 235, 0.35), rgba(0, 0, 0, 0.05));
+  }
+
+  html.light-mode .role-title--past {
+    color: var(--text-muted);
+  }
+
+  html.light-mode .role-badge--current {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--accent-blue);
+    border-color: rgba(37, 99, 235, 0.25);
+  }
+
+  html.light-mode .role-contract {
+    color: var(--accent-blue);
+  }
+
+  @media (max-width: 640px) {
+    .experience-card--group {
+      padding: 1.5rem 1.25rem;
+    }
   }
 </style>

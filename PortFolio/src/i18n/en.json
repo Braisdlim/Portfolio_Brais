@@ -41,6 +41,8 @@
   
   "projects-title": "Projects",
   "projects-description": "A selection of my most recent and outstanding work",
+  "project-aura-title": "Aura",
+  "project-aura-description": "Real-time social event discovery platform with an interactive map and smart clustering. Features a Karma & XP gamification system, Google Events integration via SerpApi, PostGIS for spatial queries, multi-language support and guest mode.",
   "project-1-title": "Spinventory",
   "project-1-description": "Advanced web application for vinyl record collection management. Features user system, wishlist, shared reviews, automatic cover generation and intelligent image management.",
 

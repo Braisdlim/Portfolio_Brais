@@ -12,6 +12,98 @@
 
     <div class="projects-content-card">
       <div class="projects-grid">
+      <!-- Proyecto 0: Aura -->
+      <article class="project-card">
+        <div class="project-image">
+          <div class="carousel-container">
+            <div class="carousel-track" id="carousel-track-aura">
+              <div class="carousel-slide active">
+                <img src="/images/projects/aura1.png" alt="Aura - Mapa interactivo de eventos" />
+              </div>
+              <div class="carousel-slide">
+                <img src="/images/projects/aura2.png" alt="Aura - Detalle de evento con sistema Karma" />
+              </div>
+              <div class="carousel-slide">
+                <img src="/images/projects/aura3.png" alt="Aura - Perfil de usuario y gamificación" />
+              </div>
+            </div>
+            <!-- Controles del carousel -->
+            <button class="carousel-btn carousel-btn-prev" data-carousel="aura" data-direction="prev" aria-label="Imagen anterior">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="carousel-btn carousel-btn-next" data-carousel="aura" data-direction="next" aria-label="Siguiente imagen">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Indicadores -->
+          <div class="carousel-indicators" data-carousel="aura">
+            <button class="indicator active" data-slide="0" aria-label="Imagen 1"></button>
+            <button class="indicator" data-slide="1" aria-label="Imagen 2"></button>
+            <button class="indicator" data-slide="2" aria-label="Imagen 3"></button>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title" data-translate="project-aura-title">Aura</h3>
+          <p class="project-description" data-translate="project-aura-description">
+            Plataforma social de descubrimiento de eventos en tiempo real con mapa interactivo y clustering inteligente. Incluye sistema de Karma y XP (gamificación), integración con Google Events vía SerpApi, PostGIS para consultas espaciales, soporte multilenguaje y modo invitado.
+          </p>
+          <div class="project-links-content">
+            <a href="https://tryaura.vercel.app/" class="project-link-btn" aria-label="Ver proyecto" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/Braisdlim/Aura" class="project-link-btn" aria-label="Ver código" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag react">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.99-3.44 2.23-.264.98-.09 1.97.35 2.69.31.51.77.88 1.24 1.08.45.19.92.23 1.37.15.42-.07.81-.28 1.12-.62.43-.47.65-1.08.67-1.72.02-.64-.18-1.26-.62-1.75-.44-.49-1.05-.77-1.69-.79zm-3.44 2.23c-.33-1.24-1.09-2.23-2.44-2.23-.55 0-1.07.18-1.53.5-.46.32-.84.76-1.12 1.28-.28.52-.42 1.12-.42 1.73 0 .61.14 1.21.42 1.73.28.52.66.96 1.12 1.28.46.32.98.5 1.53.5 1.35 0 2.11-.99 2.44-2.23.26-.98.09-1.97-.35-2.69-.31-.51-.77-.88-1.24-1.08-.45-.19-.92-.23-1.37-.15-.42.07-.81.28-1.12.62-.43.47-.65 1.08-.67 1.72-.02.64.18 1.26.62 1.75.44.49 1.05.77 1.69.79.55 0 1.07-.18 1.53-.5.46-.32.84-.76 1.12-1.28.28-.52.42-1.12.42-1.73 0-.61-.14-1.21-.42-1.73-.28-.52-.66-.96-1.12-1.28-.46-.32-.98-.5-1.53-.5z"/>
+              </svg>
+              React 19
+            </span>
+            <span class="tech-tag typescript">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/>
+              </svg>
+              TypeScript
+            </span>
+            <span class="tech-tag supabase">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C.99 12.438 1.337 12.75 1.75 12.9l8.76 3.438V23c.014.987 1.26 1.41 1.874.637L23 11.95 15.5 9.04l-3.6-8.004z"/>
+              </svg>
+              Supabase
+            </span>
+            <span class="tech-tag postgres">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.128 0a10.134 10.134 0 0 0-2.755.403l-.063.02A10.922 10.922 0 0 0 12.6.258C11.422.238 10.41.524 9.594 1 8.58.617 7.17.198 5.836.13 4.848.075 3.924.286 3.187.796 2.1.47.9.2 0 .2v1c.738 0 1.722.23 2.624.528a4.4 4.4 0 0 0-.194 1.317c0 1.73.857 3.25 2.04 4.281-1.25 1.05-2.04 2.66-2.04 4.42 0 2.21 1.25 4.17 3.12 5.04a14.48 14.48 0 0 0-.048 1.17c0 2.67 1.36 4.8 3.67 5.58.6.21 1.24.32 1.89.32 1.07 0 2.11-.32 2.96-.89 1.29.98 3.01 1.45 4.94 1.07 2.73-.54 4.9-2.75 5.1-5.47.13-1.74-.49-3.04-1-3.8a8.22 8.22 0 0 0 1-2.25c.3-1.25.2-2.41-.28-3.34l-.01-.017a4.42 4.42 0 0 0 .27-1.61C23.06 2.55 20.33 0 17.13 0z"/>
+              </svg>
+              PostGIS
+            </span>
+            <span class="tech-tag maplibre">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              MapLibre
+            </span>
+            <span class="tech-tag capacitor">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5L12 1z"/>
+              </svg>
+              Capacitor
+            </span>
+          </div>
+        </div>
+      </article>
+
       <!-- Proyecto 1 -->
       <article class="project-card">
         <div class="project-image">
@@ -271,87 +363,6 @@
         </div>
       </article>
 
-      <!-- Proyecto 4: MultithreadedEncryptionApp -->
-      <article class="project-card">
-        <div class="project-image">
-          <div class="carousel-container">
-            <div class="carousel-track" id="carousel-track-4">
-              <div class="carousel-slide active">
-                <img src="/images/projects/MultiThread1.webp" alt="MultiThread App - Vista principal" />
-              </div>
-              <div class="carousel-slide">
-                <img src="/images/projects/MultiThread2.webp" alt="MultiThread App - Dashboard" />
-              </div>
-              <div class="carousel-slide">
-                <img src="/images/projects/MultiThread3.webp" alt="MultiThread App - Funcionalidades" />
-              </div>
-            </div>
-            
-            <!-- Controles del carousel -->
-            <button class="carousel-btn carousel-btn-prev" data-carousel="4" data-direction="prev" aria-label="Imagen anterior">
-              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-              </svg>
-            </button>
-            <button class="carousel-btn carousel-btn-next" data-carousel="4" data-direction="next" aria-label="Siguiente imagen">
-              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </div>
-          
-          <!-- Indicadores -->
-          <div class="carousel-indicators" data-carousel="4">
-            <button class="indicator active" data-slide="0" aria-label="Imagen 1"></button>
-            <button class="indicator" data-slide="1" aria-label="Imagen 2"></button>
-            <button class="indicator" data-slide="2" aria-label="Imagen 3"></button>
-          </div>
-        </div>
-        <div class="project-content">
-          <h3 class="project-title" data-translate="project-4-title">MultithreadedEncryptionApp</h3>
-          <p class="project-description" data-translate="project-4-description">
-            Aplicación de escritorio WPF en C# para experimentar y comparar el rendimiento de diferentes técnicas de paralelismo y asincronía en la encriptación de texto. Incluye TPL, Parallel.ForEach, Async/Await, soporte para cancelación y medición de rendimiento.
-          </p>
-          <div class="project-links-content">
-            <a href="#" class="project-link-btn" aria-label="Ver proyecto" data-modal-trigger="multithreadedencryption">
-              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-              </svg>
-            </a>
-            <a href="https://github.com/Braisdlim/MultithreadedEncryptionApp" class="project-link-btn" aria-label="Ver código" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </a>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag csharp">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 6h3c1.5 0 2.5 1 2.5 2.5v7c0 1.5-1 2.5-2.5 2.5h-3c-1.5 0-2.5-1-2.5-2.5v-7c0-1.5 1-2.5 2.5-2.5z"/>
-              </svg>
-              C#
-            </span>
-            <span class="tech-tag xaml">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v8H8V8zm2 2v4h4v-4h-4z"/>
-              </svg>
-              XAML
-            </span>
-            <span class="tech-tag dotnet">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.868 0 0 1-.869.693.868.868 0 0 1-.868-.693.868.868 0 0 1 .868-.693.868.868 0 0 1 .869.693"/>
-              </svg>
-              .NET 8
-            </span>
-            <span class="tech-tag wpf">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M2 3v18h20V3H2zm18 16H4V7h16v12zm-2-10H6v8h12V9zm-2 6H8v-4h8v4z"/>
-              </svg>
-              WPF
-            </span>
-          </div>
-        </div>
-      </article>
       </div>
     </div>
   </div>
@@ -862,6 +873,30 @@
     color: #1d4ed8;
     border-color: rgba(29, 78, 216, 0.3);
   }
+
+  .tech-tag.typescript {
+    background: rgba(49, 120, 198, 0.1);
+    color: #3178c6;
+    border-color: rgba(49, 120, 198, 0.3);
+  }
+
+  .tech-tag.supabase {
+    background: rgba(62, 207, 142, 0.1);
+    color: #3ecf8e;
+    border-color: rgba(62, 207, 142, 0.3);
+  }
+
+  .tech-tag.maplibre {
+    background: rgba(93, 169, 233, 0.1);
+    color: #5da9e9;
+    border-color: rgba(93, 169, 233, 0.3);
+  }
+
+  .tech-tag.capacitor {
+    background: rgba(83, 158, 244, 0.1);
+    color: #539ef4;
+    border-color: rgba(83, 158, 244, 0.3);
+  }
   
   @media (max-width: 768px) {
     .projects-content-card {
@@ -1100,6 +1135,30 @@
   html.light-mode .tech-tag.wpf {
     background: rgba(29, 78, 216, 0.15);
     border-color: rgba(29, 78, 216, 0.5);
+    color: #1d4ed8;
+  }
+
+  html.light-mode .tech-tag.typescript {
+    background: rgba(49, 120, 198, 0.15);
+    border-color: rgba(49, 120, 198, 0.5);
+    color: #1e40af;
+  }
+
+  html.light-mode .tech-tag.supabase {
+    background: rgba(62, 207, 142, 0.15);
+    border-color: rgba(62, 207, 142, 0.5);
+    color: #059669;
+  }
+
+  html.light-mode .tech-tag.maplibre {
+    background: rgba(93, 169, 233, 0.15);
+    border-color: rgba(93, 169, 233, 0.5);
+    color: #1d4ed8;
+  }
+
+  html.light-mode .tech-tag.capacitor {
+    background: rgba(83, 158, 244, 0.15);
+    border-color: rgba(83, 158, 244, 0.5);
     color: #1d4ed8;
   }
 
@@ -1393,10 +1452,10 @@
   // Inicializar carousels cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', () => {
     // Inicializar carousels con los ids correctos
+    new ProjectCarousel('aura');
     new ProjectCarousel('1');
     new ProjectCarousel('indexsearch');
     new ProjectCarousel('3');
-    new ProjectCarousel('4');
 
     // Funcionalidad del Modal
     const modal = document.getElementById('project-modal');
@@ -1407,10 +1466,9 @@
 
     // URLs de GitHub por proyecto
     const githubUrls: { [key: string]: string } = {
+      'aura': 'https://github.com/Braisdlim/Aura',
       'spinventory': 'https://github.com/Braisdlim/Spinventory',
-      'multithreadedencryption': 'https://github.com/Braisdlim/MultithreadedEncryptionApp',
       'webelements': 'https://github.com/Braisdlim/WebElements'
-      // Agregar más proyectos aquí: 'proyecto-nombre': 'url-github'
     };
 
     // Abrir modal
